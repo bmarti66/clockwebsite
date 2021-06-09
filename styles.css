@@ -109,10 +109,25 @@ h3{
 }
 
 
-#or, #or2, #or3, #or4 {
+#rating1, #rating2, #rating3, #rating4, #rating5 {
 	color: white;
 	margin-top: -1%;
 	margin-bottom: -1%;
 	text-align: center;
-	font-size: 1.3vw;
+	font-size: 1.8vw;
+}
+
+#info {
+	color: white;
+	margin-top: 2%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 2.8vw;
+}
+
+#info2 {
+	color: white;
+    text-align: center;
+    margin-top: -50px; /* 0 instead of 30px*/
+	font-size: 2.8vw;
 }

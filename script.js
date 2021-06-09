@@ -15,7 +15,8 @@ function realtimeClock() {
 }
 
 function allFunctions() {
-	myFunction1();
+	myFunction6();
+  myFunction1();
 	myFunction2();
 	myFunction3();
 	myFunction4();
@@ -23,10 +24,11 @@ function allFunctions() {
 }
 
 function myFunction1() {
+    document.getElementById("rating1").innerHTML = "Bad:";
     var date = new Date();
 
    	var hours = date.getHours()+3;
-   	var minutes = date.getMinutes();
+   	var minutes = date.getMinutes()+15;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -47,14 +49,14 @@ function myFunction1() {
     var lblTime = document.getElementById("demo");
     lblTime.innerHTML = time;
 
-	document.getElementById("or").innerHTML = "OR";
+	document.getElementById("rating2").innerHTML = "Not good:";
 }
 
 function myFunction2() {
     var date = new Date();
 
    	var hours = date.getHours()+4;
-   	var minutes = date.getMinutes()+30;
+   	var minutes = date.getMinutes()+45;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -75,14 +77,14 @@ function myFunction2() {
     var lblTime = document.getElementById("demo2");
     lblTime.innerHTML = time;
 
-	document.getElementById("or2").innerHTML = "OR";
+	document.getElementById("rating3").innerHTML = "Decent:";
 }
 
 function myFunction3() {
     var date = new Date();
 
    	var hours = date.getHours()+6;
-   	var minutes = date.getMinutes();
+   	var minutes = date.getMinutes()+15;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -103,14 +105,14 @@ function myFunction3() {
     var lblTime = document.getElementById("demo3");
     lblTime.innerHTML = time;
 
-	document.getElementById("or3").innerHTML = "OR";
+	document.getElementById("rating4").innerHTML = "Optimal:";
 }
 
 function myFunction4() {
     var date = new Date();
 
    	var hours = date.getHours()+7;
-   	var minutes = date.getMinutes()+30;
+   	var minutes = date.getMinutes()+45;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -131,14 +133,14 @@ function myFunction4() {
     var lblTime = document.getElementById("demo4");
     lblTime.innerHTML = time;
 
-    document.getElementById("or4").innerHTML = "OR";
+    document.getElementById("rating5").innerHTML = "Great:";
 }
 
 function myFunction5() {
     var date = new Date();
 
    	var hours = date.getHours()+9;
-   	var minutes = date.getMinutes();
+   	var minutes = date.getMinutes()+15;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -158,6 +160,9 @@ function myFunction5() {
     time = hours + ":" + minutes + " " + am_pm;
     var lblTime = document.getElementById("demo5");
     lblTime.innerHTML = time;
+}
 
-    document.getElementById("or5").innerHTML = "OR";
+function myFunction6() {
+  document.getElementById("info").innerHTML = "It takes the average adult 10-20 minutes to fall asleep";
+  document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep";  
 }
