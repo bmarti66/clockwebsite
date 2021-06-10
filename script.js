@@ -15,12 +15,12 @@ function realtimeClock() {
 }
 
 function allFunctions() {
-	//myFunction6();
   myFunction1();
 	myFunction2();
 	myFunction3();
 	myFunction4();
 	myFunction5();
+  myFunction6();
 }
 
 function myFunction1() {
