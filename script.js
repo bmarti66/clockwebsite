@@ -4,7 +4,7 @@ function realtimeClock() {
         var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
         var am_pm = date.getHours() >= 12 ? "PM" : "AM";
 
-        hours = date.getHours() == 0 ? 12 : hours;
+        hours = date.getHours() === 0 ? 12 : hours;
         var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
         var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
 
@@ -15,7 +15,7 @@ function realtimeClock() {
 }
 
 function allFunctions() {
-	myFunction6();
+	//myFunction6();
   myFunction1();
 	myFunction2();
 	myFunction3();
