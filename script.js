@@ -1,19 +1,21 @@
+//displays current time
 function realtimeClock() {
-        var date = new Date();
+        let date = new Date();
 
-        var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-        var am_pm = date.getHours() >= 12 ? "PM" : "AM";
+        let hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+        let am_pm = date.getHours() >= 12 ? "PM" : "AM";
 
         hours = date.getHours() === 0 ? 12 : hours;
-        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+        let minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        let seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
 
         time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
-        var lblTime = document.getElementById("clock");
+        let lblTime = document.getElementById("clock");
         lblTime.innerHTML = time;
-       	var t = setTimeout(realtimeClock, 500);
+       	let t = setTimeout(realtimeClock, 500);
 }
 
+//Executes all funtions on button press
 function allFunctions() {
   myFunction1();
 	myFunction2();
@@ -25,10 +27,10 @@ function allFunctions() {
 
 function myFunction1() {
     document.getElementById("rating1").innerHTML = "Bad:";
-    var date = new Date();
+    let date = new Date();
 
-   	var hours = date.getHours()+3;
-   	var minutes = date.getMinutes()+15;
+   	let hours = date.getHours()+3;
+   	let minutes = date.getMinutes()+15;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -37,7 +39,7 @@ function myFunction1() {
    		minutes = minutes;
    	}	
 
-   	var am_pm = hours >= 24 ? "AM" : "PM";
+   	let am_pm = hours >= 24 ? "AM" : "PM";
    	am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
 
    	hours = hours > 24 ? hours - 24 : hours;
@@ -46,17 +48,17 @@ function myFunction1() {
     minutes = minutes < 10 ? "0" + minutes : minutes;
 
     time = hours + ":" + minutes + " " + am_pm;
-    var lblTime = document.getElementById("demo");
+    let lblTime = document.getElementById("demo");
     lblTime.innerHTML = time;
 
 	document.getElementById("rating2").innerHTML = "Not good:";
 }
 
 function myFunction2() {
-    var date = new Date();
+    let date = new Date();
 
-   	var hours = date.getHours()+4;
-   	var minutes = date.getMinutes()+45;
+   	let hours = date.getHours()+4;
+   	let minutes = date.getMinutes()+45;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -65,7 +67,7 @@ function myFunction2() {
    		minutes = minutes;
    	}	
 
-   	var am_pm = hours >= 24 ? "AM" : "PM";
+   	let am_pm = hours >= 24 ? "AM" : "PM";
    	am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
 
    	hours = hours > 24 ? hours - 24 : hours;
@@ -74,17 +76,17 @@ function myFunction2() {
     minutes = minutes < 10 ? "0" + minutes : minutes;
 
     time = hours + ":" + minutes + " " + am_pm;
-    var lblTime = document.getElementById("demo2");
+    let lblTime = document.getElementById("demo2");
     lblTime.innerHTML = time;
 
 	document.getElementById("rating3").innerHTML = "Decent:";
 }
 
 function myFunction3() {
-    var date = new Date();
+    let date = new Date();
 
-   	var hours = date.getHours()+6;
-   	var minutes = date.getMinutes()+15;
+   	let hours = date.getHours()+6;
+   	let minutes = date.getMinutes()+15;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -93,7 +95,7 @@ function myFunction3() {
    		minutes = minutes;
    	}	
 
-   	var am_pm = hours >= 24 ? "AM" : "PM";
+   	let am_pm = hours >= 24 ? "AM" : "PM";
    	am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
 
    	hours = hours > 24 ? hours - 24 : hours;
@@ -102,17 +104,17 @@ function myFunction3() {
     minutes = minutes < 10 ? "0" + minutes : minutes;
 
     time = hours + ":" + minutes + " " + am_pm;
-    var lblTime = document.getElementById("demo3");
+    let lblTime = document.getElementById("demo3");
     lblTime.innerHTML = time;
 
 	document.getElementById("rating4").innerHTML = "Optimal:";
 }
 
 function myFunction4() {
-    var date = new Date();
+    let date = new Date();
 
-   	var hours = date.getHours()+7;
-   	var minutes = date.getMinutes()+45;
+   	let hours = date.getHours()+7;
+   	let minutes = date.getMinutes()+45;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -121,7 +123,7 @@ function myFunction4() {
    		minutes = minutes;
    	}	
 
-   	var am_pm = hours >= 24 ? "AM" : "PM";
+   	let am_pm = hours >= 24 ? "AM" : "PM";
    	am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
 
    	hours = hours > 24 ? hours - 24 : hours;
@@ -130,17 +132,17 @@ function myFunction4() {
     minutes = minutes < 10 ? "0" + minutes : minutes;
 
     time = hours + ":" + minutes + " " + am_pm;
-    var lblTime = document.getElementById("demo4");
+    let lblTime = document.getElementById("demo4");
     lblTime.innerHTML = time;
 
     document.getElementById("rating5").innerHTML = "Great:";
 }
 
 function myFunction5() {
-    var date = new Date();
+    let date = new Date();
 
-   	var hours = date.getHours()+9;
-   	var minutes = date.getMinutes()+15;
+   	let hours = date.getHours()+9;
+   	let minutes = date.getMinutes()+15;
 
    	if (minutes >= 60 ) {
    		minutes = minutes - 60;
@@ -149,7 +151,7 @@ function myFunction5() {
    		minutes = minutes;
    	}	
 
-   	var am_pm = hours >= 24 ? "AM" : "PM";
+   	let am_pm = hours >= 24 ? "AM" : "PM";
    	am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
 
    	hours = hours > 24 ? hours - 24 : hours;
@@ -158,7 +160,7 @@ function myFunction5() {
     minutes = minutes < 10 ? "0" + minutes : minutes;
 
     time = hours + ":" + minutes + " " + am_pm;
-    var lblTime = document.getElementById("demo5");
+    let lblTime = document.getElementById("demo5");
     lblTime.innerHTML = time;
 }
 

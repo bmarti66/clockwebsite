@@ -6,7 +6,7 @@ h1{
 	width: 100%;
 	margin-top: 5%;
 	position: absolute;
-	font-size: 7vw;
+	font-size: 7.3vw;
 	font-weight: bold;
 	text-align: center;
 	color: white;
@@ -34,7 +34,7 @@ h2{
 	text-align: center;
 	color: white;
 	font-family:'Oswald', sans-serif;
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 }
 
 h3{
@@ -53,13 +53,13 @@ h3{
 	background-color:#63b8ee;
 	border-radius:6px;
 	font-family:Arial;
-	font-size:22px;
+	font-size:33px;
 	font-weight:bold;
 	margin: inherit;
     display: block;
 	margin-top: 35%;
 	margin-right: inherit;
-	padding: 15px 50px;
+	padding: 15px 100px;
 	-webkit-appearance: none;
 }
 
