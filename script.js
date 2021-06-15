@@ -163,7 +163,7 @@ function myFunction5() {
     let lblTime = document.getElementById("demo5");
     lblTime.innerHTML = time;
 
-    document.getElementById("info3").innerHTML = "A good night's rest consists of 5-6 REM cycles. Each of which last 90 minutes.";
+    document.getElementById("info3").innerHTML = "A good night's rest consists of 5-6 REM cycles. Each cycle lasts 90 minutes.";
 }
 
 function myFunction6() {
