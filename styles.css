@@ -27,7 +27,7 @@ h1{
 
 h2{
 	width: 100%;
-	margin-top: 27%;
+	margin-top: 5%;
 	position: absolute;
 	font-size: 2.4vw;
 	font-weight: bold;
@@ -47,6 +47,22 @@ h3{
 	letter-spacing: 5px;
 }
 
+.redirect-button {
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color:#63b8ee;
+	border-radius:6px;
+	font-family:Arial;
+	font-size:34px;
+	font-weight:bold;
+	margin: inherit;
+    display: block;
+	margin-top: 25%;
+	margin-right: inherit;
+	padding: 15px 100px;
+	-webkit-appearance: none;
+}
+
 .pure-button {
 	box-shadow:inset 0px 1px 0px 0px #bee2f9;
 	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
@@ -57,7 +73,7 @@ h3{
 	font-weight:bold;
 	margin: inherit;
     display: block;
-	margin-top: 32%;
+	margin-top: 10%;
 	margin-right: inherit;
 	padding: 15px 100px;
 	-webkit-appearance: none;
