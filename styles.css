@@ -183,3 +183,16 @@ h3{
 	font-family:'Oswald', sans-serif;
 	letter-spacing: 1.3px;
 }
+
+#alarm-container {
+	text-align:center;
+    font-family: Verdana;
+    font-size: 0.6em;
+    padding: 0.7em;
+  color: white;
+}
+
+label {
+	display:inline-block;
+}
+
