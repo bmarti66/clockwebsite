@@ -279,18 +279,8 @@ setInterval(function(){
 },1000);
 
 
-  // console.log('currentTime:' + currentTime); 
-
 }
 
 
-function alarmClear() {
-
-  document.getElementById('alarmhrs').disabled = false;
-  document.getElementById('alarmmins').disabled = false;
-  document.getElementById('alarmsecs').disabled = false;
-  document.getElementById('ampm').disabled = false;
-  sound.pause();
-}
 
 
