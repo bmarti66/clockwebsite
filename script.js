@@ -175,4 +175,34 @@ function addTime() {
     let selectHrs = document.getElementById("hours").selectedOptions[0].text;
     let selectMins = document.getElementById("minutes").selectedOptions[0].text;
     let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
+
+    let hours = parseInt(selectHrs);
+    hours = hours + 3;
+    let minutes = parseInt(selectMins);
+    minutes = minutes + 15;
+
+    if (minutes >= 60 ) {
+      minutes = minutes - 60;
+      hours = hours+1; }
+    else {
+      minutes = minutes;
+    } 
+
+    let ampm = selectAmpm;
+
+    if (ampm == "AM") {
+        am_pm = hours >= 12 ? "PM" : "AM";
+    }
+
+    if (ampm == "PM") {
+        am_pm = hours >= 12 ? "AM" : "PM";
+    }
+
+    hours = hours > 24 ? hours - 24 : hours;
+    hours = hours > 12 ? hours - 12 : hours;
+    
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    time = hours + ":" + minutes + " " + am_pm;
+    alert(time);
 }
