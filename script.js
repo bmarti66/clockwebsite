@@ -171,3 +171,8 @@ function myFunction6() {
   document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep";  
 }
 
+function addTime() {
+    let selectHrs = document.getElementById("hours").selectedOptions[0].text;
+    let selectMins = document.getElementById("minutes").selectedOptions[0].text;
+    let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
+}

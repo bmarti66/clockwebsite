@@ -203,3 +203,21 @@ label {
 	display:inline-block;
 }
 
+.calc-button {
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color:#63b8ee;
+	border-radius:6px;
+	font-family:Arial;
+	font-size:34px;
+	font-weight:bold;
+	margin-top: 1%;
+	margin-right: inherit;
+	padding: 15px 100px;
+	-webkit-appearance: none;
+}
+
+.calc-button:hover {
+	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+	background-color:#468ccf;
+}
