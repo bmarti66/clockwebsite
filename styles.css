@@ -189,7 +189,14 @@ h3{
     font-family: Verdana;
     font-size: 0.6em;
     padding: 0.7em;
-  color: white;
+  	color: white;
+  	margin-top: 31%;
+  	height: 100px;
+}
+
+select {
+	width: 50px;
+	height: 20px;
 }
 
 label {
