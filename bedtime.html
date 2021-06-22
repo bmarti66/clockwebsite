@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+	<title>Your bedtime calculator</title>
+	<script src ="script.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<!-- Page icon -->
+	<link rel="icon" href="https://www.pinclipart.com/picdir/middle/550-5502511_file-mccormick-sleep-svg-graphics-zzz-sleep-clipart.png">
+</head>
+
+<button class="back-button" onclick="location.href='index.html'">Go back</button>
+
+<!--Current time clock-->
+<body onload="realtimeClock()">
+	<div class="main-container">
+		<h1>Current Time</h1>
+		<div id="clock"></div><br>
+		<h2 id="when">What time do you need to wake up?</h2>
+
+	<div id='alarm-container'>
+		<label>
+			<div>
+				<select id="hours">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+			</div>
+		</label>	
+		<label>
+			<div>
+				<select id="minutes">
+					<option value="00">00</option>
+					<option value="05">05</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="35">35</option>
+					<option value="40">40</option>
+					<option value="45">45</option>
+					<option value="50">50</option>
+					<option value="55">55</option>				
+				</select>
+			</div>
+		</label>			
+		<label>
+			<div>
+				<select id="ampm">
+					<option value="AM">AM</option>
+					<option value="PM">PM</option>
+				</select>
+			</div>
+		</label>
+		<br>
+		<button class="calc-button" onclick="addTime()">When should I go to bed?</button>
+
+	</div>
+
+	</div>
+</body>
+</html>
