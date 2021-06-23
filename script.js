@@ -177,8 +177,14 @@ function addTime() {
     let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
 
     let hours = parseInt(selectHrs);
-    hours = hours + 3;
     let minutes = parseInt(selectMins);
+    let am_pm = selectAmpm;
+
+    if (am_pm == 'AM' && hours == 12) {
+        am_pm = 'Midnight';
+    }
+
+    hours = hours + 3;
     minutes = minutes + 15;
 
     if (minutes >= 60 ) {
@@ -188,14 +194,16 @@ function addTime() {
       minutes = minutes;
     } 
 
-    let ampm = selectAmpm;
-
-    if (ampm == "AM") {
-        am_pm = hours >= 12 ? "PM" : "AM";
+    if (am_pm == 'Midnight') {
+        am_pm = hours >= 12 && hours < 24 ? "Midnight" : "PM"; 
     }
 
-    if (ampm == "PM") {
-        am_pm = hours >= 12 ? "AM" : "PM";
+    if (am_pm == 'AM' ) {
+        am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";  
+    } 
+
+    if (am_pm == 'Midnight') {
+        am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
     }
 
     hours = hours > 24 ? hours - 24 : hours;
