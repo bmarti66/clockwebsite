@@ -184,6 +184,14 @@ function addTime() {
         am_pm = 'Midnight';
     }
 
+    if (am_pm == 'PM' && hours == 12) {
+        am_pm = 'Afternoon';
+    }
+
+    if (am_pm == 'PM' && hours == 12) {
+        am_pm = 'Daytime';
+    }
+
     hours = hours + 3;
     minutes = minutes + 15;
 
@@ -194,6 +202,14 @@ function addTime() {
       minutes = minutes;
     } 
 
+    if (am_pm == 'PM' ) {
+        am_pm = hours >= 12 && hours < 24 ? "After" : "PM";  
+    }
+
+    if (am_pm == 'Afternoon') {
+        am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
+    }
+
     if (am_pm == 'Midnight') {
         am_pm = hours >= 12 && hours < 24 ? "Midnight" : "PM"; 
     }
@@ -202,9 +218,18 @@ function addTime() {
         am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";  
     } 
 
+    if (am_pm == 'After') {
+        am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
+    } 
+
     if (am_pm == 'Midnight') {
         am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
     }
+
+    if (am_pm == 'Daytime') {
+        am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
+    }
+
 
     hours = hours > 24 ? hours - 24 : hours;
     hours = hours > 12 ? hours - 12 : hours;
