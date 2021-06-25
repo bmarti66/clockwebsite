@@ -230,12 +230,47 @@ function addTime() {
         am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
     }
 
-
     hours = hours > 24 ? hours - 24 : hours;
     hours = hours > 12 ? hours - 12 : hours;
     
     minutes = minutes < 10 ? "0" + minutes : minutes;
 
     time = hours + ":" + minutes + " " + am_pm;
+    alert(time);
+}
+
+function subtractTime() {
+    let selectHrs = document.getElementById("hours").selectedOptions[0].text;
+    let selectMins = document.getElementById("minutes").selectedOptions[0].text;
+    let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
+
+    let hours = parseInt(selectHrs);
+    let minutes = parseInt(selectMins);
+    let am_pm = selectAmpm;
+
+    if (am_pm == 'AM' && hours == 12) {
+        am_pm = 'Midnight';
+    }
+
+    hours = hours - 3;
+    minutes = minutes - 15;
+
+    let date = new Date(2000, 0, 1, hours, minutes);
+
+    hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours(); 
+    
+    if (am_pm == 'Midnight') {
+        am_pm = hours >= 12 && hours < 24 ? "boner" : "PM";
+    } else {
+        am_pm = date.getHours() >= 12 ? "PM" : "AM";    
+    }
+
+    hours = date.getHours() === 0 ? 12 : hours;
+    minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+
+    time = hours + ":" + minutes + " " + am_pm;
+
+/* PM IS STILL FUCKED UP */
+
     alert(time);
 }
