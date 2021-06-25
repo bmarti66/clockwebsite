@@ -180,97 +180,71 @@ function addTime() {
     let minutes = parseInt(selectMins);
     let am_pm = selectAmpm;
 
-    if (am_pm == 'AM' && hours == 12) {
-        am_pm = 'Midnight';
+    if (am_pm == 'AM') {
+
+      if (am_pm == 'AM' && hours == 12) {
+          am_pm = 'Midnight';
+      }
+
+      hours = hours + 3;
+      minutes = minutes + 15;
+
+      if (minutes >= 60 ) {
+        minutes = minutes - 60;
+        hours = hours+1; }
+      else {
+        minutes = minutes;
+      }
+
+      let date = new Date(2000, 0, 1, hours, minutes);
+
+      if (am_pm == 'Midnight') {
+          am_pm = hours >= 12 && hours < 24 ? "AM" : "PM";
+      } else {
+          am_pm = hours >= 12 ? 'PM' : 'AM';
+      }
+
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+
+      minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+      time = hours + ":" + minutes + " " + am_pm;
+
     }
 
-    if (am_pm == 'PM' && hours == 12) {
-        am_pm = 'Afternoon';
-    }
+    else  {
 
-    if (am_pm == 'PM' && hours == 12) {
-        am_pm = 'Daytime';
-    }
+      if (am_pm == 'PM' && hours == 12) {
+          am_pm = 'Midday';
+      }
 
-    hours = hours + 3;
-    minutes = minutes + 15;
+      hours = hours + 3;
+      minutes = minutes + 15;
 
-    if (minutes >= 60 ) {
-      minutes = minutes - 60;
-      hours = hours+1; }
-    else {
-      minutes = minutes;
-    } 
+      if (minutes >= 60 ) {
+        minutes = minutes - 60;
+        hours = hours+1; }
+      else {
+        minutes = minutes;
+      }
 
-    if (am_pm == 'PM' ) {
-        am_pm = hours >= 12 && hours < 24 ? "After" : "PM";  
-    }
+      let date = new Date(2000, 0, 1, hours, minutes);
 
-    if (am_pm == 'Afternoon') {
-        am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
-    }
+      if (am_pm == 'Midday') {
+          am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
+      } else {
+          am_pm = hours >= 12 ? 'AM' : 'PM';
+      }
 
-    if (am_pm == 'Midnight') {
-        am_pm = hours >= 12 && hours < 24 ? "Midnight" : "PM"; 
-    }
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0' + minutes : minutes;
 
-    if (am_pm == 'AM' ) {
-        am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";  
-    } 
+      minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+      time = hours + ":" + minutes + " " + am_pm;
+      
+      }
 
-    if (am_pm == 'After') {
-        am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
-    } 
-
-    if (am_pm == 'Midnight') {
-        am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
-    }
-
-    if (am_pm == 'Daytime') {
-        am_pm = hours >= 12 && hours < 24 ? "AM" : "PM"; 
-    }
-
-    hours = hours > 24 ? hours - 24 : hours;
-    hours = hours > 12 ? hours - 12 : hours;
-    
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-
-    time = hours + ":" + minutes + " " + am_pm;
-    alert(time);
-}
-
-function subtractTime() {
-    let selectHrs = document.getElementById("hours").selectedOptions[0].text;
-    let selectMins = document.getElementById("minutes").selectedOptions[0].text;
-    let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
-
-    let hours = parseInt(selectHrs);
-    let minutes = parseInt(selectMins);
-    let am_pm = selectAmpm;
-
-    if (am_pm == 'AM' && hours == 12) {
-        am_pm = 'Midnight';
-    }
-
-    hours = hours - 3;
-    minutes = minutes - 15;
-
-    let date = new Date(2000, 0, 1, hours, minutes);
-
-    hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours(); 
-    
-    if (am_pm == 'Midnight') {
-        am_pm = hours >= 12 && hours < 24 ? "boner" : "PM";
-    } else {
-        am_pm = date.getHours() >= 12 ? "PM" : "AM";    
-    }
-
-    hours = date.getHours() === 0 ? 12 : hours;
-    minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-
-    time = hours + ":" + minutes + " " + am_pm;
-
-/* PM IS STILL FUCKED UP */
-
-    alert(time);
+      alert(time);
 }
