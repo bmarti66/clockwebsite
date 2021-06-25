@@ -1,31 +1,31 @@
 //displays current time
 function realtimeClock() {
-        let date = new Date();
+    let date = new Date();
 
-        let hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-        let am_pm = date.getHours() >= 12 ? "PM" : "AM";
+    let hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+    let am_pm = date.getHours() >= 12 ? "PM" : "AM";
 
-        hours = date.getHours() === 0 ? 12 : hours;
-        let minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-        let seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+    hours = date.getHours() === 0 ? 12 : hours;
+    let minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+    let seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
 
-        time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
-        let lblTime = document.getElementById("clock");
-        lblTime.innerHTML = time;
-        let t = setTimeout(realtimeClock, 500);
+    time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
+    let lblTime = document.getElementById("clock");
+    lblTime.innerHTML = time;
+    let t = setTimeout(realtimeClock, 500);
 }
 
 //Executes all funtions on button press
 function allFunctions() {
-  myFunction1();
-  myFunction2();
-  myFunction3();
-  myFunction4();
-  myFunction5();
-  myFunction6();
+  sleepNowTime1();
+  sleepNowTime2();
+  sleepNowTime3();
+  sleepNowTime4();
+  sleepNowTime4();
+  extraInfo1();
 }
 
-function myFunction1() {
+function sleepNowTime1() {
     document.getElementById("rating1").innerHTML = "Bad:";
     let date = new Date();
 
@@ -51,10 +51,10 @@ function myFunction1() {
     let lblTime = document.getElementById("demo");
     lblTime.innerHTML = time;
 
-  document.getElementById("rating2").innerHTML = "Not good:";
+    document.getElementById("rating2").innerHTML = "Not good:";
 }
 
-function myFunction2() {
+function sleepNowTime2() {
     let date = new Date();
 
     let hours = date.getHours()+4;
@@ -79,10 +79,10 @@ function myFunction2() {
     let lblTime = document.getElementById("demo2");
     lblTime.innerHTML = time;
 
-  document.getElementById("rating3").innerHTML = "Decent:";
+    document.getElementById("rating3").innerHTML = "Decent:";
 }
 
-function myFunction3() {
+function sleepNowTime3() {
     let date = new Date();
 
     let hours = date.getHours()+6;
@@ -107,10 +107,10 @@ function myFunction3() {
     let lblTime = document.getElementById("demo3");
     lblTime.innerHTML = time;
 
-  document.getElementById("rating4").innerHTML = "Optimal:";
+    document.getElementById("rating4").innerHTML = "Optimal:";
 }
 
-function myFunction4() {
+function sleepNowTime4() {
     let date = new Date();
 
     let hours = date.getHours()+7;
@@ -138,7 +138,7 @@ function myFunction4() {
     document.getElementById("rating5").innerHTML = "Great:";
 }
 
-function myFunction5() {
+function sleepNowTime4() {
     let date = new Date();
 
     let hours = date.getHours()+9;
@@ -166,7 +166,7 @@ function myFunction5() {
     document.getElementById("info3").innerHTML = "A good night's rest consists of 5-6 REM cycles. Each cycle lasts 90 minutes.";
 }
 
-function myFunction6() {
+function extraInfo1() {
   document.getElementById("info").innerHTML = "It takes the average adult 10-20 minutes to fall asleep";
   document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep";  
 }
@@ -248,3 +248,95 @@ function addTime() {
 
       alert(time);
 }
+
+function subtractTime() {
+    let selectHrs = document.getElementById("hours").selectedOptions[0].text;
+    let selectMins = document.getElementById("minutes").selectedOptions[0].text;
+    let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
+
+    let hours = parseInt(selectHrs);
+    let minutes = parseInt(selectMins);
+    let am_pm = selectAmpm;
+
+    if (am_pm == 'AM') {
+
+      if (am_pm == 'AM' && hours == 12) {
+          am_pm = 'Midnight';
+      }
+
+      hours = hours - 3;
+      minutes = minutes - 15;
+
+      if (minutes < 0 ) {
+        minutes = minutes - 60;
+        hours = hours-1; }
+      else {
+        minutes = minutes;
+      }
+
+      let date = new Date(2000, 0, 1, hours, minutes);
+
+
+      if (am_pm == 'Midnight') {
+          am_pm = hours >= 12 && hours < 24 ? "AM" : "PM";
+      } else {
+          am_pm = hours >= 12 ? 'PM' : 'AM';
+      }
+
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+
+      if (hours < 0) {
+        hours = hours + 12;
+        am_pm = 'PM';
+      }
+
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+
+      minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+      time = hours + ":" + minutes + " " + am_pm;
+
+    }
+
+    else  {
+
+      if (am_pm == 'PM' && hours == 12) {
+          am_pm = 'Midday';
+      }
+
+      hours = hours - 3;
+      minutes = minutes - 15;
+
+      if (minutes < 0 ) {
+        minutes = minutes - 60;
+        hours = hours-1; }
+      else {
+        minutes = minutes;
+      }
+
+      let date = new Date(2000, 0, 1, hours, minutes);
+
+      if (am_pm == 'Midday') {
+          am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
+      } else {
+          am_pm = hours >= 12 ? 'AM' : 'PM';
+      }
+
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+
+      if (hours < 0) {
+        hours = hours + 12;
+        am_pm = 'AM';
+      }
+
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+
+      minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+      time = hours + ":" + minutes + " " + am_pm;
+      
+      }
+
+      alert(time);
+}
+

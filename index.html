@@ -10,33 +10,34 @@
 
 <!--Current time clock-->
 <body onload="realtimeClock()">
-	<div class="main-container">
-		<h1>Current Time</h1>
-		<div id="clock"></div><br>
-		<h2 id="calctext">Calculate when you should wake up.</h2>
-		<center><button class="wakeup-button" onclick="location.href='wakeup.html'">Calculate wakeup</button></center>
-		<h2 id="calctext2">Calculate when you should go to bed.</h2>
-		<center><button class="bedtime-button" onclick="location.href='bedtime.html'">Calculate bedtime</button></center>
-		<h2>If I go to sleep now, when should I wake up?</h2>
-		<center>
-			<!--Button class and all below ids happen on button click -->
-			<button class="pure-button" onclick="allFunctions()">Go to bed right now</button>
-			<p id="info"></p>
-			<p id="info2"></p>
-			<p id="rating1"></p>			
-			<p id="demo"></p>
-			<p id="rating2"></p>
-			<p id="demo2"></p>
-			<p id="rating3"></p>
-			<p id="demo3"></p>
-			<p id="rating4"></p>
-			<p id="demo4"></p>
-			<p id="rating5"></p>
-			<p id="demo5"></p>
-			<br>
-			<p id="info3"></p>
-		</center>
-	</div>
-
-</body>
+		<div class="main-container">
+			<h1>Current Time</h1>
+			<div id="clock"></div><br>
+			<h2 id="calctext">Calculate when you should wake up.</h2>
+			<!--Wake up button-->
+			<center><button class="wakeup-button" onclick="location.href='wakeup.html'">Calculate wakeup</button></center>
+			<h2 id="calctext2">Calculate when you should go to bed.</h2>
+			<!--Bedtime button-->		
+			<center><button class="bedtime-button" onclick="location.href='bedtime.html'">Calculate bedtime</button></center>
+			<h2>If I go to sleep now, when should I wake up?</h2>
+			<center>
+				<!--Button class and all below ids happen on button click -->
+				<button class="pure-button" onclick="allFunctions()">Go to bed right now</button>
+					<p id="info"></p>
+					<p id="info2"></p>
+					<p id="rating1"></p>			
+					<p id="demo"></p>
+					<p id="rating2"></p>
+					<p id="demo2"></p>
+					<p id="rating3"></p>
+					<p id="demo3"></p>
+					<p id="rating4"></p>
+					<p id="demo4"></p>
+					<p id="rating5"></p>
+					<p id="demo5"></p>
+					<br>
+					<p id="info3"></p>
+			</center>
+		</div>
+	</body>
 </html>
