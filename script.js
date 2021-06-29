@@ -18,21 +18,45 @@ function realtimeClock() {
 //Executes all funtions on button press
 function allSleepNow() {
   sleepNowTime1();
-  sleepNowTime2();
-  sleepNowTime3();
-  sleepNowTime4();
-  sleepNowTime4();
-  extraInfo1();
 }
 
 function sleepNowTime1() {
-    
+  
+  document.getElementById("info").innerHTML = "It takes the average adult 10-20 minutes to fall asleep";
+  document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep"; 
+
+  let rating1 = document.getElementById("rating1").innerHTML = "Bad";
+  let rating2 = document.getElementById("rating2").innerHTML = "Not good";
+  let rating3 = document.getElementById("rating3").innerHTML = "Decent";
+  let rating4 = document.getElementById("rating4").innerHTML = "Optimal";
+  let rating5 = document.getElementById("rating5").innerHTML = "Great";
+
   for (let i = 1; i < 6; i++) {
-    document.getElementById("rating"+i).innerHTML = "Bad:";
+    document.getElementById("rating"+i).innerHTML;
     let date = new Date();
 
     let hours = date.getHours()+3;
     let minutes = date.getMinutes()+15;
+
+    if (i == 2) {
+      hours = date.getHours()+4;
+      minutes = date.getMinutes()+45;
+    }
+
+    if (i == 3) {
+      hours = date.getHours()+6;
+      minutes = date.getMinutes()+15;
+    }
+
+    if (i == 4) {
+      hours = date.getHours()+7;
+      minutes = date.getMinutes()+45;
+    }
+
+    if (i == 5) {
+      hours = date.getHours()+9;
+      minutes = date.getMinutes()+15;
+    }
 
     if (minutes >= 60 ) {
       minutes = minutes - 60;
@@ -54,122 +78,9 @@ function sleepNowTime1() {
     lblTime.innerHTML = time;
 
   }
-}
 
-/*
-function sleepNowTime2() {
-    document.getElementById("rating2").innerHTML = "Not good:";
-    let date = new Date();
+  document.getElementById("info3").innerHTML = "A good night's rest consists of 5-6 REM cycles. Each cycle lasts 90 minutes.";
 
-    let hours = date.getHours()+4;
-    let minutes = date.getMinutes()+45;
-
-    if (minutes >= 60 ) {
-      minutes = minutes - 60;
-      hours = hours+1; }
-    else {
-      minutes = minutes;
-    } 
-
-    let am_pm = hours >= 24 ? "AM" : "PM";
-    am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
-
-    hours = hours > 24 ? hours - 24 : hours;
-    hours = hours > 12 ? hours - 12 : hours;
-    
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-
-    time = hours + ":" + minutes + " " + am_pm;
-    let lblTime = document.getElementById("sleepNow2");
-    lblTime.innerHTML = time;
-}
-
-function sleepNowTime3() {
-    document.getElementById("rating3").innerHTML = "Decent:";
-    let date = new Date();
-
-    let hours = date.getHours()+6;
-    let minutes = date.getMinutes()+15;
-
-    if (minutes >= 60 ) {
-      minutes = minutes - 60;
-      hours = hours+1; }
-    else {
-      minutes = minutes;
-    } 
-
-    let am_pm = hours >= 24 ? "AM" : "PM";
-    am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
-
-    hours = hours > 24 ? hours - 24 : hours;
-    hours = hours > 12 ? hours - 12 : hours;
-    
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-
-    time = hours + ":" + minutes + " " + am_pm;
-    let lblTime = document.getElementById("sleepNow3");
-    lblTime.innerHTML = time;
-}
-
-function sleepNowTime4() {
-    document.getElementById("rating4").innerHTML = "Optimal:";    
-    let date = new Date();
-
-    let hours = date.getHours()+7;
-    let minutes = date.getMinutes()+45;
-
-    if (minutes >= 60 ) {
-      minutes = minutes - 60;
-      hours = hours+1; }
-    else {
-      minutes = minutes;
-    } 
-
-    let am_pm = hours >= 24 ? "AM" : "PM";
-    am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
-
-    hours = hours > 24 ? hours - 24 : hours;
-    hours = hours > 12 ? hours - 12 : hours;
-    
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-
-    time = hours + ":" + minutes + " " + am_pm;
-    let lblTime = document.getElementById("sleepNow4");
-    lblTime.innerHTML = time;
-}
-
-function sleepNowTime4() {
-    document.getElementById("rating5").innerHTML = "Great:";
-    let date = new Date();
-
-    let hours = date.getHours()+9;
-    let minutes = date.getMinutes()+15;
-
-    if (minutes >= 60 ) {
-      minutes = minutes - 60;
-      hours = hours+1; }
-    else {
-      minutes = minutes;
-    } 
-
-    let am_pm = hours >= 24 ? "AM" : "PM";
-    am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
-
-    hours = hours > 24 ? hours - 24 : hours;
-    hours = hours > 12 ? hours - 12 : hours;
-    
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-
-    time = hours + ":" + minutes + " " + am_pm;
-    let lblTime = document.getElementById("sleepNow5");
-    lblTime.innerHTML = time;
-
-    document.getElementById("info3").innerHTML = "A good night's rest consists of 5-6 REM cycles. Each cycle lasts 90 minutes.";
-}
-*/
-function extraInfo1() {
-  document.getElementById("info").innerHTML = "It takes the average adult 10-20 minutes to fall asleep";
-  document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep";  
 }
 
 function addTime() {
