@@ -90,7 +90,7 @@ h3{
 	background-color:#468ccf;
 }
 
-#demo {
+#sleepNow1 {
 	color: #E92525;
 	margin-top: 1%;
 	text-align: center;
@@ -98,7 +98,7 @@ h3{
 	font-size: 3.1vw;
 }
 
-#demo2 {
+#sleepNow2 {
 	color: #E92525;
 	margin-top: 1%;
 	text-align: center;
@@ -106,7 +106,7 @@ h3{
 	font-size: 3.1vw;
 }
 
-#demo3 {
+#sleepNow3 {
 	color: #FCFF00;
 	margin-top: 1%;
 	text-align: center;
@@ -114,7 +114,7 @@ h3{
 	font-size: 3.1vw;
 }
 
-#demo4 {
+#sleepNow4 {
 	color: #2F9E00;
 	margin-top: 1%;
 	text-align: center;
@@ -122,18 +122,26 @@ h3{
 	font-size: 3.1vw;
 }
 
-#demo5 {
+#sleepNow5 {
 	color: #2F9E00;
-	margin-top: 1%;
+	margin-top: -5%;
 	text-align: center;
 	padding: 15px 32px;
 	font-size: 3.1vw;
 }
 
+
+#wakeTime1, #wakeTime2, #wakeTime3, #wakeTime4, #wakeTime5 {
+	color: #E92525;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
 
 #rating1, #rating2, #rating3, #rating4, #rating5 {
 	color: white;
-	margin-top: -1%;
+	margin-top: 0%;
 	margin-bottom: -1%;
 	text-align: center;
 	font-size: 2.3vw;
