@@ -88,11 +88,21 @@ function addTime() {
     let selectMins = document.getElementById("minutes").selectedOptions[0].text;
     let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
 
+    let rating1 = document.getElementById("rating1").innerHTML = "Bad";
+    let rating2 = document.getElementById("rating2").innerHTML = "Not good";
+    let rating3 = document.getElementById("rating3").innerHTML = "Decent";
+    let rating4 = document.getElementById("rating4").innerHTML = "Optimal";
+    let rating5 = document.getElementById("rating5").innerHTML = "Great";
+
     let hours = parseInt(selectHrs);
     let minutes = parseInt(selectMins);
     let am_pm = selectAmpm;
 
+    hours = hours + 3;
+
     for (let i = 1; i < 6; i++) {
+
+    document.getElementById("rating"+i).innerHTML;
 
     if (am_pm == 'AM') {
 
@@ -100,8 +110,8 @@ function addTime() {
           am_pm = 'Midnight';
       }
 
-      hours = hours + 3;
-      minutes = minutes + 15;
+      hours = hours + 1;
+      minutes = minutes + 45;
 
       if (minutes >= 60 ) {
         minutes = minutes - 60;
@@ -133,8 +143,8 @@ function addTime() {
           am_pm = 'Midday';
       }
 
-      hours = hours + 3;
-      minutes = minutes + 15;
+      hours = hours + 1;
+      minutes = minutes + 45;
 
       if (minutes >= 60 ) {
         minutes = minutes - 60;
@@ -160,7 +170,7 @@ function addTime() {
       
       }
 
-    let lblTime = document.getElementById("wakeTime"+i);
+    let lblTime = document.getElementById("wakeTime"+(i));
     lblTime.innerHTML = time;
   }
 }
@@ -170,9 +180,21 @@ function subtractTime() {
     let selectMins = document.getElementById("minutes").selectedOptions[0].text;
     let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
 
+    let rating1 = document.getElementById("rating1").innerHTML = "Bad";
+    let rating2 = document.getElementById("rating2").innerHTML = "Not good";
+    let rating3 = document.getElementById("rating3").innerHTML = "Decent";
+    let rating4 = document.getElementById("rating4").innerHTML = "Optimal";
+    let rating5 = document.getElementById("rating5").innerHTML = "Great";
+
     let hours = parseInt(selectHrs);
     let minutes = parseInt(selectMins);
     let am_pm = selectAmpm;
+
+    hours = hours-3;
+
+    for (let i = 1; i < 6; i++) {
+
+    document.getElementById("rating"+i).innerHTML;
 
     if (am_pm == 'AM') {
 
@@ -180,8 +202,8 @@ function subtractTime() {
           am_pm = 'Midnight';
       }
 
-      hours = hours - 3;
-      minutes = minutes - 15;
+      hours = hours - 1;
+      minutes = minutes - 45;
 
       if (minutes < 0 ) {
         minutes = minutes - 60;
@@ -220,8 +242,8 @@ function subtractTime() {
           am_pm = 'Midday';
       }
 
-      hours = hours - 3;
-      minutes = minutes - 15;
+      hours = hours - 1;
+      minutes = minutes - 45;
 
       if (minutes < 0 ) {
         minutes = minutes - 60;
@@ -253,6 +275,8 @@ function subtractTime() {
       
       }
 
-      alert(time);
+    let lblTime = document.getElementById("bedTime"+(i));
+    lblTime.innerHTML = time;
+  }
 }
 

@@ -131,8 +131,80 @@ h3{
 }
 
 
-#wakeTime1, #wakeTime2, #wakeTime3, #wakeTime4, #wakeTime5 {
+#wakeTime1 {
 	color: #E92525;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#wakeTime2 {
+	color: #E92525;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#wakeTime3 {
+	color: #FCFF00;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#wakeTime4 {
+	color: #2F9E00;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#wakeTime5 {
+	color: #2F9E00;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#bedTime1 {
+	color: #E92525;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#bedTime2 {
+	color: #E92525;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#bedTime3 {
+	color: #FCFF00;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#bedTime4 {
+	color: #2F9E00;
+	margin-top: 1%;
+	text-align: center;
+	padding: 15px 32px;
+	font-size: 3.1vw;
+}
+
+#bedTime5 {
+	color: #2F9E00;
 	margin-top: 1%;
 	text-align: center;
 	padding: 15px 32px;
