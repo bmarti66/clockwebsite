@@ -65,7 +65,7 @@ h3{
 }
 
 .redirect-button:hover {
-		background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
 	background-color:#468ccf;
 }
 
@@ -90,15 +90,7 @@ h3{
 	background-color:#468ccf;
 }
 
-#sleepNow1 {
-	color: #E92525;
-	margin-top: 1%;
-	text-align: center;
-	padding: 15px 32px;
-	font-size: 3.1vw;
-}
-
-#sleepNow2 {
+#sleepNow1, #sleepNow2 {
 	color: #E92525;
 	margin-top: 1%;
 	text-align: center;
@@ -114,7 +106,7 @@ h3{
 	font-size: 3.1vw;
 }
 
-#sleepNow4 {
+#sleepNow4, #sleepNow5 {
 	color: #2F9E00;
 	margin-top: 1%;
 	text-align: center;
@@ -122,24 +114,7 @@ h3{
 	font-size: 3.1vw;
 }
 
-#sleepNow5 {
-	color: #2F9E00;
-	margin-top: 1%;
-	text-align: center;
-	padding: 15px 32px;
-	font-size: 3.1vw;
-}
-
-
-#wakeTime1 {
-	color: #E92525;
-	margin-top: 1%;
-	text-align: center;
-	padding: 15px 32px;
-	font-size: 3.1vw;
-}
-
-#wakeTime2 {
+#wakeTime1, #wakeTime2 {
 	color: #E92525;
 	margin-top: 1%;
 	text-align: center;
@@ -171,15 +146,7 @@ h3{
 	font-size: 3.1vw;
 }
 
-#bedTime1 {
-	color: #E92525;
-	margin-top: 1%;
-	text-align: center;
-	padding: 15px 32px;
-	font-size: 3.1vw;
-}
-
-#bedTime2 {
+#bedTime1, #bedTime2 {
 	color: #E92525;
 	margin-top: 1%;
 	text-align: center;

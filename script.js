@@ -17,10 +17,6 @@ function realtimeClock() {
 
 //Executes all funtions on button press
 function allSleepNow() {
-  sleepNowTime1();
-}
-
-function sleepNowTime1() {
   
   document.getElementById("info").innerHTML = "It takes the average adult 10-20 minutes to fall asleep";
   document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep"; 
@@ -194,89 +190,88 @@ function subtractTime() {
 
     for (let i = 1; i < 6; i++) {
 
-    document.getElementById("rating"+i).innerHTML;
+      document.getElementById("rating"+i).innerHTML;
 
-    if (am_pm == 'AM') {
+      if (am_pm == 'AM') {
 
-      if (am_pm == 'AM' && hours == 12) {
-          am_pm = 'Midnight';
+        if (am_pm == 'AM' && hours == 12) {
+            am_pm = 'Midnight';
+        }
+
+        hours = hours - 1;
+        minutes = minutes - 45;
+
+        if (minutes < 0 ) {
+          minutes = minutes - 60;
+          hours = hours-1; }
+        else {
+          minutes = minutes;
+        }
+
+        let date = new Date(2000, 0, 1, hours, minutes);
+
+        if (am_pm == 'Midnight') {
+            am_pm = hours >= 12 && hours < 24 ? "AM" : "PM";
+        } else {
+            am_pm = hours >= 12 ? 'PM' : 'AM';
+        }
+
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+
+        if (hours < 0) {
+          hours = hours + 12;
+          am_pm = 'PM';
+        }
+
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+
+        minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        time = hours + ":" + minutes + " " + am_pm;
+
       }
 
-      hours = hours - 1;
-      minutes = minutes - 45;
+      else  {
 
-      if (minutes < 0 ) {
-        minutes = minutes - 60;
-        hours = hours-1; }
-      else {
-        minutes = minutes;
-      }
+        if (am_pm == 'PM' && hours == 12) {
+            am_pm = 'Midday';
+        }
 
-      let date = new Date(2000, 0, 1, hours, minutes);
+        hours = hours - 1;
+        minutes = minutes - 45;
 
+        if (minutes < 0 ) {
+          minutes = minutes - 60;
+          hours = hours-1; }
+        else {
+          minutes = minutes;
+        }
 
-      if (am_pm == 'Midnight') {
-          am_pm = hours >= 12 && hours < 24 ? "AM" : "PM";
-      } else {
-          am_pm = hours >= 12 ? 'PM' : 'AM';
-      }
+        let date = new Date(2000, 0, 1, hours, minutes);
 
-      hours = hours % 12;
-      hours = hours ? hours : 12; // the hour '0' should be '12'
+        if (am_pm == 'Midday') {
+            am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
+        } else {
+            am_pm = hours >= 12 ? 'AM' : 'PM';
+        }
 
-      if (hours < 0) {
-        hours = hours + 12;
-        am_pm = 'PM';
-      }
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
 
-      minutes = minutes < 10 ? '0' + minutes : minutes;
+        if (hours < 0) {
+          hours = hours + 12;
+          am_pm = 'AM';
+        }
 
-      minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-      time = hours + ":" + minutes + " " + am_pm;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
 
-    }
+        minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        time = hours + ":" + minutes + " " + am_pm;
+        
+        }
 
-    else  {
-
-      if (am_pm == 'PM' && hours == 12) {
-          am_pm = 'Midday';
-      }
-
-      hours = hours - 1;
-      minutes = minutes - 45;
-
-      if (minutes < 0 ) {
-        minutes = minutes - 60;
-        hours = hours-1; }
-      else {
-        minutes = minutes;
-      }
-
-      let date = new Date(2000, 0, 1, hours, minutes);
-
-      if (am_pm == 'Midday') {
-          am_pm = hours >= 12 && hours < 24 ? "PM" : "AM";
-      } else {
-          am_pm = hours >= 12 ? 'AM' : 'PM';
-      }
-
-      hours = hours % 12;
-      hours = hours ? hours : 12; // the hour '0' should be '12'
-
-      if (hours < 0) {
-        hours = hours + 12;
-        am_pm = 'AM';
-      }
-
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-
-      minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-      time = hours + ":" + minutes + " " + am_pm;
-      
-      }
-
-    let lblTime = document.getElementById("bedTime"+(i));
-    lblTime.innerHTML = time;
+      let lblTime = document.getElementById("bedTime"+(i));
+      lblTime.innerHTML = time;
   }
 }
 
