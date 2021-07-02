@@ -13,12 +13,11 @@
 <!--Current time clock-->
 <body onload="realtimeClock()">
 
-		<div class="main-container">
 			<h1>Current Time</h1>
 			<div id="clock"></div><br>
 			<h2 id="when">What time do you need to wake up?</h2>
 			<!--Container for drop menu and button-->
-			<div id='alarm-container'>
+			<div id='dropdown-container'>
 				<label>
 					<div>
 						<select id="hours">
@@ -64,6 +63,7 @@
 					</div>
 				</label>
 				<br>
+			</div>
 				<button class="calc-button" onclick="subtractTime()">When should I go to bed?</button>
 					<br><br><br><br><br><br><br><br>
 					<p id ="rating1"></p>					
@@ -76,7 +76,5 @@
 					<p id ="bedTime4"></p>
 					<p id ="rating5"></p>
 					<p id ="bedTime5"></p>	
-			</div>
-		</div>
 	</body>
 </html>

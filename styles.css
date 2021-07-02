@@ -69,7 +69,7 @@ h3{
 	background-color:#468ccf;
 }
 
-.pure-button {
+.sleepNow-button {
 	box-shadow:inset 0px 1px 0px 0px #bee2f9;
 	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
 	background-color:#63b8ee;
@@ -85,7 +85,7 @@ h3{
 	-webkit-appearance: none;
 }
 
-.pure-button:hover {
+.sleepNow-button:hover {
 	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
 	background-color:#468ccf;
 }
@@ -232,25 +232,6 @@ h3{
 	letter-spacing: 1.3px;
 }
 
-#alarm-container {
-	text-align:center;
-    font-family: Verdana;
-    font-size: 0.6em;
-    padding: 0.7em;
-  	color: white;
-  	margin-top: 31%;
-  	height: 100px;
-}
-
-select {
-	width: 50px;
-	height: 20px;
-}
-
-label {
-	display:inline-block;
-}
-
 .calc-button {
 	box-shadow:inset 0px 1px 0px 0px #bee2f9;
 	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
@@ -259,9 +240,12 @@ label {
 	font-family:Arial;
 	font-size:34px;
 	font-weight:bold;
-	margin-top: 1%;
+	margin-top: -1%;
 	margin-right: inherit;
 	padding: 15px 100px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 	-webkit-appearance: none;
 }
 
@@ -322,4 +306,43 @@ label {
 .bedtime-button:hover {
 	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
 	background-color:#468ccf;
+}
+
+.back-button {
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color:#63b8ee;
+	border-radius:6px;
+	font-family:Arial;
+	font-size:25px;
+	font-weight:bold;
+	margin-top: 0%;
+	margin-right: inherit;
+	padding: 4px 20px;
+	-webkit-appearance: none;
+}
+
+.back-button:hover {
+	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+	background-color:#468ccf;
+}
+
+select {
+	width: 50px;
+	height: 20px;
+}
+
+label {
+	display:inline-block;
+	cursor: pointer;
+}
+
+#dropdown-container {
+	text-align:center;
+    font-family: Verdana;
+    font-size: 0.6em;
+    padding: 0.7em;
+  	color: white;
+  	margin-top: 31%;
+  	height: 100px;
 }
