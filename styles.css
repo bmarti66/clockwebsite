@@ -327,12 +327,45 @@ h3{
 	background-color:#468ccf;
 }
 
-select {
-	width: 50px;
-	height: 20px;
+:root {
+	  --radius: 10px;
+	  --baseFg: dimgray;
+	  --baseBg: white;
+	  --accentFg: #006fc2;
+	  --accentBg: #bae1ff;
 }
 
-label {
+select {
+	  font: 500 21px/1.3 sans-serif;
+	  -webkit-appearance: none;
+	  appearance: none;
+	  color: var(--baseFg);
+	  border: 1px solid var(--baseFg);
+	  line-height: 1;
+	  outline: 0;
+	  padding: 0.65em 2.5em 0.55em 0.75em;
+	  border-radius: var(--radius);
+	  background-color: var(--baseBg);
+	  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
+	    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+	    linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
+	    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+	  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+	  background-position: right 20px center, right bottom, right bottom, right bottom; 
+}
+
+#hourLabel {
+	display:inline-block;
+	cursor: pointer;
+}
+
+#minLabel {
+	display:inline-block;
+	cursor: pointer;
+}
+
+#ampmLabel {
 	display:inline-block;
 	cursor: pointer;
 }

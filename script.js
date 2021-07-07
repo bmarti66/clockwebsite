@@ -1,31 +1,3 @@
-$("select").on("click" , function() {
-  
-  $(this).parent(".select-box").toggleClass("open");
-  
-});
-
-$(document).mouseup(function (e)
-{
-    var container = $(".select-box");
-
-    if (container.has(e.target).length === 0)
-    {
-        container.removeClass("open");
-    }
-});
-
-
-$("select").on("change" , function() {
-  
-  var selection = $(this).find("option:selected").text(),
-      labelFor = $(this).attr("id"),
-      label = $("[for='" + labelFor + "']");
-    
-  label.find(".label-desc").html(selection);
-    
-});
-
-
 //displays current time
 function realtimeClock() {
     let date = new Date();
@@ -107,6 +79,7 @@ function allSleepNow() {
 
 }
 
+//wakeup.html button
 function addTime() {
     let selectHrs = document.getElementById("hours").selectedOptions[0].text;
     let selectMins = document.getElementById("minutes").selectedOptions[0].text;
@@ -199,6 +172,7 @@ function addTime() {
   }
 }
 
+//bedtime.html button
 function subtractTime() {
     let selectHrs = document.getElementById("hours").selectedOptions[0].text;
     let selectMins = document.getElementById("minutes").selectedOptions[0].text;
