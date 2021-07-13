@@ -96,6 +96,7 @@ function addTime() {
     let am_pm = selectAmpm;
 
     hours = hours + 3;
+    minutes = minutes + 15;
 
     for (let i = 1; i < 6; i++) {
 
@@ -108,7 +109,7 @@ function addTime() {
       }
 
       hours = hours + 1;
-      minutes = minutes + 45;
+      minutes = minutes + 30;
 
       if (minutes >= 60 ) {
         minutes = minutes - 60;
@@ -141,7 +142,7 @@ function addTime() {
       }
 
       hours = hours + 1;
-      minutes = minutes + 45;
+      minutes = minutes + 30;
 
       if (minutes >= 60 ) {
         minutes = minutes - 60;
@@ -189,6 +190,7 @@ function subtractTime() {
     let am_pm = selectAmpm;
 
     hours = hours-3;
+    minutes = minutes-15;
 
     for (let i = 1; i < 6; i++) {
 
@@ -201,7 +203,7 @@ function subtractTime() {
         }
 
         hours = hours - 1;
-        minutes = minutes - 45;
+        minutes = minutes - 30;
 
         if (minutes < 0 ) {
           minutes = minutes - 60;
@@ -240,7 +242,7 @@ function subtractTime() {
         }
 
         hours = hours - 1;
-        minutes = minutes - 45;
+        minutes = minutes - 30;
 
         if (minutes < 0 ) {
           minutes = minutes - 60;
