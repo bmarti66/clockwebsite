@@ -27,6 +27,7 @@ function allSleepNow() {
   let rating4 = document.getElementById("rating4").innerHTML = "Optimal";
   let rating5 = document.getElementById("rating5").innerHTML = "Great";
 
+  //increments by 1 each run displaying 5 total elements (times)
   for (let i = 1; i < 6; i++) {
     document.getElementById("rating"+i).innerHTML;
     let date = new Date();
@@ -85,6 +86,9 @@ function addTime() {
     let selectMins = document.getElementById("minutes").selectedOptions[0].text;
     let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
 
+    document.getElementById("info").innerHTML = "It takes the average adult 10-20 minutes to fall asleep";
+    document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep"; 
+
     let rating1 = document.getElementById("rating1").innerHTML = "Bad";
     let rating2 = document.getElementById("rating2").innerHTML = "Not good";
     let rating3 = document.getElementById("rating3").innerHTML = "Decent";
@@ -98,6 +102,7 @@ function addTime() {
     hours = hours + 3;
     minutes = minutes + 15;
 
+    //increments by 1 each run displaying 5 total elements (times)
     for (let i = 1; i < 6; i++) {
 
     document.getElementById("rating"+i).innerHTML;
@@ -179,6 +184,9 @@ function subtractTime() {
     let selectMins = document.getElementById("minutes").selectedOptions[0].text;
     let selectAmpm = document.getElementById("ampm").selectedOptions[0].text;
 
+    document.getElementById("info").innerHTML = "It takes the average adult 10-20 minutes to fall asleep";
+    document.getElementById("info2").innerHTML = "Times assume it will take 15 minutes to fall asleep"; 
+
     let rating1 = document.getElementById("rating1").innerHTML = "Bad";
     let rating2 = document.getElementById("rating2").innerHTML = "Not good";
     let rating3 = document.getElementById("rating3").innerHTML = "Decent";
@@ -192,6 +200,7 @@ function subtractTime() {
     hours = hours-3;
     minutes = minutes-15;
 
+    //increments by 1 each run displaying 5 total elements (times)
     for (let i = 1; i < 6; i++) {
 
       document.getElementById("rating"+i).innerHTML;
